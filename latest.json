@@ -1,6 +1,6 @@
 {
-  "version": "v0.6.0",
-  "publishedAt": "2026-09-03T16:53:26Z",
+  "version": "v0.6.1",
+  "publishedAt": "2026-09-03T17:02:42Z",
   "assets": {
     "macos_pkg": "https://github.com/clivewalkden/quartermaster-agent-releases/releases/latest/download/quartermaster-agent.pkg",
     "windows_installer": "https://github.com/clivewalkden/quartermaster-agent-releases/releases/latest/download/quartermaster-agent-setup.exe",
