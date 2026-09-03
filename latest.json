@@ -1,0 +1,11 @@
+{
+  "version": "v0.1.3",
+  "publishedAt": "2026-09-03T06:03:47Z",
+  "assets": {
+    "macos_pkg": "https://github.com/clivewalkden/quartermaster-agent-releases/releases/latest/download/quartermaster-agent.pkg",
+    "windows_installer": "https://github.com/clivewalkden/quartermaster-agent-releases/releases/latest/download/quartermaster-agent-setup.exe",
+    "linux_deb_amd64": "https://github.com/clivewalkden/quartermaster-agent-releases/releases/latest/download/quartermaster-agent_amd64.deb",
+    "linux_deb_arm64": "https://github.com/clivewalkden/quartermaster-agent-releases/releases/latest/download/quartermaster-agent_arm64.deb"
+  },
+  "checksums": "https://github.com/clivewalkden/quartermaster-agent-releases/releases/latest/download/checksums.txt"
+}
