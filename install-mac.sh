@@ -24,7 +24,11 @@ if [ "$(uname -s)" != "Darwin" ]; then
   exit 1
 fi
 
-if [ ! -e /dev/tty ]; then
+# -e /dev/tty only checks the device node exists, not that this process actually has a
+# controlling terminal to open it against (a fully non-interactive/piped context still passes
+# -e but fails at the actual read below, with a much less helpful "device not configured"
+# error) — `: < /dev/tty` genuinely attempts the open, so it catches that case too.
+if ! ( : < /dev/tty ) 2>/dev/null; then
   echo "No terminal available to prompt for input — run this in an interactive Terminal session, not from a non-interactive script/CI." >&2
   exit 1
 fi
