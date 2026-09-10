@@ -70,8 +70,10 @@ if [ -n "$LOCATION" ]; then
 fi
 
 echo "Triggering a first run to confirm everything's working..."
-sudo launchctl kickstart -k system/com.sozodesign.quartermaster-agent
-sleep 3
+# Not `launchctl kickstart` — that only restarts the scheduled job, which itself skips the
+# actual work outside Mon-Fri 09:00-17:00 local time, so it'd silently do nothing at all if this
+# installer's being run outside that window. quartermaster-agent-run-now bypasses that gate.
+sudo quartermaster-agent-run-now
 
 echo
 echo "Result of the first run:"
